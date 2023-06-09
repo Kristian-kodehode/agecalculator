@@ -12,9 +12,11 @@ function calculate() {
   setInterval(() => {
     let birthdate = new Date(document.getElementById("birthdate").value);
 
+    //Defining new date, subtracts with the user input aka birthdate
     let now = new Date();
     let ageInMilliSeconds = now.getTime() - birthdate.getTime();
 
+    //Calculates time from ms to seconds, sec to min etc.
     let ageInSeconds = ageInMilliSeconds / 1000;
     let ageInMinutes = ageInSeconds / 60;
     let ageInHours = ageInMinutes / 60;
@@ -22,6 +24,7 @@ function calculate() {
     let ageInMonths = ageInDays / 30.4375;
     let ageInYears = ageInMonths / 12;
 
+    //Uses remainder to calculate what is bigger than the number it represents.
     years.textContent = Math.floor(ageInYears);
     months.textContent = Math.floor(ageInMonths % 12);
     days.textContent = Math.floor(ageInDays % 30.4375);
@@ -32,6 +35,7 @@ function calculate() {
   }, 1000);
 }
 
+//Resets window by reload
 function reset() {
   window.location.reload();
 }
