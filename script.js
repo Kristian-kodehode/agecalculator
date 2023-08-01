@@ -8,11 +8,11 @@ const seconds = document.getElementById("seconds");
 const calculateButton = document.getElementById("button-calculate");
 const resetButton = document.getElementById("button-reset");
 
-let intervalId;
+// let intervalId;
 function calculate() {
-  clearInterval(intervalId);
+  // clearInterval(intervalId);
 
-  intervalId = setInterval(() => {
+  setInterval(() => {
     let birthdate = new Date(document.getElementById("birthdate").value);
 
     //Defining new date, subtracts with the user input aka birthdate
@@ -34,7 +34,8 @@ function calculate() {
     hours.textContent = Math.floor(ageInHours % 24);
     minutes.textContent = Math.floor(ageInMinutes % 60);
     seconds.textContent = Math.floor(ageInSeconds % 60);
-    // document.querySelector("#seconds").style.borderBottom = "1px grey solid";
+
+    document.querySelector("#seconds").style.borderBottom = "1px grey solid";
   }, 1000);
 }
 
@@ -47,12 +48,9 @@ function reset() {
   hours.textContent = "";
   minutes.textContent = "";
   seconds.textContent = "";
-  // window.location.reload();
+  window.location.reload();
   // console.log("Reset clicked");
 }
 
-calculateButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  calculate;
-});
+calculateButton.addEventListener("click", calculate);
 resetButton.addEventListener("click", reset);
