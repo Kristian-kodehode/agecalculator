@@ -40,7 +40,7 @@ function calculate() {
 
 //Resets window by reload
 function reset() {
-  clearInterval(intervalId);
+  // clearInterval(intervalId);
   years.textContent = "";
   months.textContent = "";
   days.textContent = "";
@@ -51,5 +51,8 @@ function reset() {
   // console.log("Reset clicked");
 }
 
-calculateButton.addEventListener("click", calculate);
+calculateButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  calculate;
+});
 resetButton.addEventListener("click", reset);
