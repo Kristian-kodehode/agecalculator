@@ -12,16 +12,21 @@
     <main class="container">
       <form action="input">
         <label for="birthdate">Enter birthdate</label>
-        <input type="date" id="birthdate" />
+        <span class="datepicker-toggle">
+          <span class="datepicker-toggle-button"></span>
+          <input type="date" id="birthdate" class="datepicker-input" />
+        </span>
+        <!-- <input type="date" id="birthdate" /> -->
       </form>
 
       <ul>
-        <li>Years : <span id="years"></span></li>
-        <li>Months : <span id="months"></span></li>
-        <li>Days : <span id="days"></span></li>
-        <li>Hours : <span id="hours"></span></li>
-        <li>Minutes : <span id="minutes"></span></li>
-        <li>Seconds : <span id="seconds"></span></li>
+        <h2>Years : <span id="years"></span></h2>
+
+        <h2>Months : <span id="months"></span></h2>
+        <h2>Days : <span id="days"></span></h2>
+        <h2>Hours : <span id="hours"></span></h2>
+        <h2>Minutes : <span id="minutes"></span></h2>
+        <h2>Seconds : <span id="seconds"></span></h2>
       </ul>
 
       <div class="buttons">
