@@ -6,8 +6,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script src="script.js" defer></script>
@@ -17,12 +23,14 @@
     <h1>Age Calculator</h1>
     <main class="container">
       <form action="input">
-        <label for="birthdate">Enter birthdate</label>
-        <span class="datepicker-toggle">
-          <span class="datepicker-toggle-button"></span>
-          <input type="date" id="birthdate" class="datepicker-input" />
-        </span>
-        <!-- <input type="date" id="birthdate" /> -->
+        <!-- <label for="birthdate">Enter birthdate</label> -->
+        <h4>Enter birthdate</h4>
+        <div class="date-calc-container">
+          <input type="date" id="birthdate" class="date-input" />
+          <button id="button-calculate" class="button-calculate">
+            Calculate
+          </button>
+        </div>
       </form>
 
       <ul>
@@ -35,7 +43,6 @@
         <h2>Seconds : <span id="seconds"></span></h2>
       </ul>
       <div class="buttons">
-        <button id="button-calculate">Calculate</button>
         <button id="button-reset">Reset</button>
       </div>
 
