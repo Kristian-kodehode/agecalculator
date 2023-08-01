@@ -1,5 +1,13 @@
+html {
+  font-family: "Work Sans", sans-serif;
+}
+
 li {
   list-style: none;
+}
+
+button {
+  padding: 16px;
 }
 
 .datepicker-toggle {

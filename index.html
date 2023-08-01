@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
     <title>Age calculator</title>
   </head>
@@ -20,15 +26,14 @@
       </form>
 
       <ul>
-        <h2>Years : <span id="years"></span></h2>
-
+        <h2>Years :</h2>
+        <h2 id="years"></h2>
         <h2>Months : <span id="months"></span></h2>
         <h2>Days : <span id="days"></span></h2>
         <h2>Hours : <span id="hours"></span></h2>
         <h2>Minutes : <span id="minutes"></span></h2>
         <h2>Seconds : <span id="seconds"></span></h2>
       </ul>
-
       <div class="buttons">
         <button id="button-calculate">Calculate</button>
         <button id="button-reset">Reset</button>
