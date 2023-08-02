@@ -72,7 +72,18 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* This section calls the slideInFromLeft animation we defined above */
-  animation: 2s ease-in-out 0s 1 openingAnimation;
+  /* animation: 2s ease-in-out 0s 1 openingAnimation; */
+}
+.result-containers {
+  border: 1px solid black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.result-boxes {
+  width: 150px;
+  height: 100px;
+  background-color: var(--col-secondary);
+  color: var(--col-primary);
+  text-align: center;
 }
