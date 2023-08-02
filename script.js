@@ -35,7 +35,7 @@ function calculate() {
     minutes.textContent = Math.floor(ageInMinutes % 60);
     seconds.textContent = Math.floor(ageInSeconds % 60);
 
-    document.querySelector("#seconds").style.borderBottom = "1px grey solid";
+    // document.querySelector("#seconds").style.borderBottom = "1px grey solid";
   }, 1000);
 }
 

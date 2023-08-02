@@ -4,6 +4,7 @@ html {
 :root {
   --col-primary: #ffd460;
   --col-secondary: #2d4059;
+  --col-seethrough: #f07b3f;
 }
 body {
   background-color: var(--col-primary);
@@ -11,6 +12,7 @@ body {
 }
 
 .date-calc-container {
+  /* margin: 0 auto; */
   border: 1px solid black;
   padding: 16px;
   width: 400px;
@@ -36,11 +38,15 @@ button {
   border: 1px solid rgba(255, 255, 255, 0);
   cursor: pointer;
 }
+
 button:hover {
   background-color: var(--col-primary);
   color: var(--col-secondary);
   border: 1px solid var(--col-secondary);
   box-shadow: 4px 4px 0px var(--col-secondary);
+}
+button:active {
+  background-color: var(--col-seethrough);
 }
 .button-calculate {
   background-color: var(--col-secondary);
@@ -49,20 +55,24 @@ button:hover {
   width: 50%;
 }
 
-@keyframes slideInFromLeft {
+@keyframes openingAnimation {
   0% {
-    transform: translateY(-100%) scale(0.4);
+    transform: scale(0.9);
     opacity: 0;
   }
   100% {
-    transform: translateY(0) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
 
 .container {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   /* This section calls the slideInFromLeft animation we defined above */
-  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+  animation: 2s ease-in-out 0s 1 openingAnimation;
 }
