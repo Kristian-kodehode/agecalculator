@@ -10,14 +10,18 @@ html {
   font-family: "Inter", sans-serif;
 }
 :root {
-  --col-primary: #ffd460;
+  /* --col-primary: #ffd460; */
+  --col-primary: #e7efff;
   /* --col-primary: #c2fcff; */
   --col-secondary: #2d4059;
-  --col-seethrough: #ffa375;
+  /* --col-seethrough: #ffa375; */
+  --col-people: #ff8474;
+  --col-hover: #a6c8ff;
 }
 body {
   background-color: var(--col-primary);
   color: var(--col-secondary);
+  padding-bottom: 40px;
 }
 
 .date-calc-container {
@@ -44,25 +48,23 @@ li {
 
 button {
   padding: 16px;
-  /* width: 120px; */
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: none;
+  /* border: 1px solid rgba(255, 255, 255, 0); */
   cursor: pointer;
 }
 
-/* button:hover {
-  background-color: var(--col-primary);
+button:hover {
+  background-color: var(--col-hover);
   color: var(--col-secondary);
-  border: 1px solid var(--col-secondary);
-  box-shadow: 4px 4px 0px var(--col-secondary);
+
+  letter-spacing: 0.5px;
 }
-button:active {
-  background-color: var(--col-seethrough);
-} */
 
 .buttons {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--col-secondary);
 }
 .button-calculate {
   background-color: var(--col-secondary);
@@ -71,10 +73,15 @@ button:active {
   width: 100%;
 }
 .button-reset {
-  background-color: var(--col-secondary);
-  color: var(--col-primary);
+  background-color: var(--col-primary);
+  color: var(--col-secondary);
   font-weight: 700;
   width: 100%;
+}
+
+img {
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 @keyframes openingAnimation {
@@ -89,23 +96,21 @@ button:active {
 }
 
 .container {
-  /* border: 1px solid black; */
   max-width: 768px;
-  /* align-items: center; */
   margin: 0 auto;
-  height: 70vh;
+  /* height: 50vh; */
   padding: 1em;
   animation: 2s ease-in-out 0s 1 openingAnimation;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0.5em;
+  gap: 1em;
+  text-align: center;
 }
 .result-containers {
   border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 1em;
-  margin-bottom: 1em;
+
   gap: 1em;
   width: 100%;
   padding: 1em;
@@ -124,8 +129,7 @@ button:active {
 
 @media only screen and (min-width: 600px) {
   .container {
-    height: 50vh;
-    /* animation: 2s ease-in-out 0s 1 openingAnimation; */
+    /* height: 50vh; */
   }
   .result-containers {
     grid-template-columns: repeat(3, 1fr);
