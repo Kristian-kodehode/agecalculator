@@ -9,15 +9,19 @@
     <title>Age calculator</title>
   </head>
   <body>
-    <h1>Age Calculator</h1>
+    <!-- <h1>Age Calculator</h1> -->
     <main class="container">
       <!-- <label for="birthdate">Enter birthdate</label> -->
-      <h4>Enter birthdate</h4>
+      <h2>Enter birthdate</h2>
       <div class="date-calc-container">
         <input type="date" id="birthdate" class="date-input" />
-        <button id="button-calculate" class="button-calculate">
-          Calculate
-        </button>
+
+        <div class="buttons">
+          <button id="button-calculate" class="button-calculate">
+            Calculate
+          </button>
+          <button id="button-reset">Reset</button>
+        </div>
       </div>
 
       <div class="result-containers">
@@ -45,11 +49,7 @@
           <h2>Seconds</h2>
           <h2 id="seconds"></h2>
         </div>
-
         <!-- <h2>Seconds : <span id="seconds"></span></h2> -->
-      </div>
-      <div class="buttons">
-        <button id="button-reset">Reset</button>
       </div>
 
       <!-- CREATE A CALCULATOR THAT GIVES THE DAY OF THE WEEK FROM INPUT DATE AND YEAR -->

@@ -1,10 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Inter", sans-serif;
 }
 :root {
   --col-primary: #ffd460;
+  /* --col-primary: #c2fcff; */
   --col-secondary: #2d4059;
-  --col-seethrough: #f07b3f;
+  --col-seethrough: #ffa375;
 }
 body {
   background-color: var(--col-primary);
@@ -12,19 +21,20 @@ body {
 }
 
 .date-calc-container {
-  /* margin: 0 auto; */
   border: 1px solid black;
-  padding: 16px;
-  width: 400px;
+  padding: 1em;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
   box-shadow: 4px 4px 0px var(--col-secondary);
 }
 
 .date-input {
-  width: 40%;
-  padding: 16px;
+  width: 100%;
   font-size: 16px;
 }
 
@@ -34,12 +44,12 @@ li {
 
 button {
   padding: 16px;
-  width: 120px;
+  /* width: 120px; */
   border: 1px solid rgba(255, 255, 255, 0);
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
   background-color: var(--col-primary);
   color: var(--col-secondary);
   border: 1px solid var(--col-secondary);
@@ -47,12 +57,24 @@ button:hover {
 }
 button:active {
   background-color: var(--col-seethrough);
+} */
+
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .button-calculate {
   background-color: var(--col-secondary);
   color: var(--col-primary);
   font-weight: 700;
-  width: 50%;
+  width: 100%;
+}
+.button-reset {
+  background-color: var(--col-secondary);
+  color: var(--col-primary);
+  font-weight: 700;
+  width: 100%;
 }
 
 @keyframes openingAnimation {
@@ -67,25 +89,45 @@ button:active {
 }
 
 .container {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* animation: 2s ease-in-out 0s 1 openingAnimation; */
+  /* border: 1px solid black; */
+  max-width: 768px;
+  /* align-items: center; */
+  margin: 0 auto;
+  height: 70vh;
+  padding: 1em;
+  animation: 2s ease-in-out 0s 1 openingAnimation;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5em;
 }
 .result-containers {
   border: 1px solid black;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  gap: 1em;
+  width: 100%;
+  padding: 1em;
+  height: 100%;
+  box-shadow: 4px 4px 0px var(--col-secondary);
 }
 .result-boxes {
-  width: 150px;
-  height: 120px;
+  width: 100%;
+  min-height: 120px;
   background-color: var(--col-secondary);
   color: var(--col-primary);
   text-align: center;
   padding: 16px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    height: 50vh;
+    /* animation: 2s ease-in-out 0s 1 openingAnimation; */
+  }
+  .result-containers {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
